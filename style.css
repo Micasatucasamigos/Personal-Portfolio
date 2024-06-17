@@ -15,7 +15,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    /* background-image: url(images/Professional\ Headshot.jpg); */
+    background-image: url(images/gradbackground.JPG);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -201,7 +201,7 @@ nav ul li a:hover::after{
 .work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-gap: 50px;
     margin-top: 30px;
 }
 .work{
@@ -277,12 +277,14 @@ nav ul li a:hover::after{
     text-align: left;
 }
 /* ---------contact-------- */
-#contact {
-    align-content: center;
-
+#contact .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contact-sub {
-    text-align: right;
+    text-align: center;
+    margin-top: 80px;
 }
 .contact-left{
     flex-basis: 35%;
@@ -350,9 +352,6 @@ form .btn2{
 .copyright a{
     color: #ff004f;
     text-decoration: none;
-}
-.contact-center {
-    align-items: center;
 }
 /* -----------------css for small screens--------- */
 nav .fas{
@@ -423,4 +422,25 @@ nav .fas{
     margin-top: -40px;
     display: block;
     text-align: center;
+}
+
+.work-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjust spacing between items */
+}
+.work {
+    width: calc(33.333% - 20px); /* Adjust the percentage to account for the gap */
+    height: 220px; /* Set a fixed height */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    position: relative; /* Ensure the layer div positions correctly */
+}
+.work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the div without distortion */
+}
+
+.cv-anchor {
+    color: red;
 }
